@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>AstroSharks WebPage</title>
+  <link rel="stylesheet" href="/static/css/stylesmain.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+  <!-- Navbar nueva -->
+  <header class="nav">
+    <img src="https://i.ibb.co/0jJLKzxN/Astro-Sharks.png" alt="AstroSharks Logo" width="200px" height="60px">
+    <nav class="nav-links">
+      <ul>
+        <li><button class="navbutton"><a href="#">Home</a></button></li>
+        <li><button class="navbutton"><a href="#funcionamiento">Operation</a></button></li>
+        <li><button class="navbutton"><a href="#mapa">Interactive Map</a></button></li>
+        <li><button class="navbutton"><a href="#visualizar">View Species</a></button></li>
+        <li><button class="navbutton"><a href="#desarrolladores">Developers</a></button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-overlay">
+      <h1><span class="highlight">ASTRO</span>SHARKS<br><span class="highlight">Sea</span>Tracker</h1>
+      <p>Marine species tracking device</p>
+      <button><a href="#funcionamiento" style="text-decoration: none; color: #0a192f;">More about the project</a></button>
+    </div>
+  </section>
+
+  <!-- Device Operation -->
+  <section id="funcionamiento" class="functioning-section" style="padding: 2rem;">
+    <h2 style="text-align: center; color: #004080;">Device Operation</h2>
+    <p style="text-align: center;">Sea Tracker is an innovative device designed for real-time monitoring of marine species, allowing precise and detailed biometric information to be obtained about each specimen. This advanced system collects data such as approximate size and weight, common and scientific name, depth at which it is found, and behavioral patterns such as hunting activity or displacement.
+
+      Its operation is based on a small sensor that is carefully placed on the species, without affecting its well-being, and transmits the data to a digital platform for analysis, conservation, and scientific research.
+      
+      With Sea Tracker, marine research reaches a new level of precision and sustainability, offering a key tool to protect oceanic biodiversity and better understand life under the sea.</p>
+  </section>
+
+<!-- From Uiverse.io by Lakshay-art --> 
+<center><div class="section-banner">
+  <div id="star-1">
+    <div class="curved-corner-star">
+      <div id="curved-corner-bottomright"></div>
+      <div id="curved-corner-bottomleft"></div>
+    </div>
+    <div class="curved-corner-star">
+      <div id="curved-corner-topright"></div>
+      <div id="curved-corner-topleft"></div>
+    </div>
+  </div>
+
+  <div id="star-2">
+    <div class="curved-corner-star">
+      <div id="curved-corner-bottomright"></div>
+      <div id="curved-corner-bottomleft"></div>
+    </div>
+    <div class="curved-corner-star">
+      <div id="curved-corner-topright"></div>
+      <div id="curved-corner-topleft"></div>
+    </div>
+  </div>
+
+  <div id="star-3">
+    <div class="curved-corner-star">
+      <div id="curved-corner-bottomright"></div>
+      <div id="curved-corner-bottomleft"></div>
+    </div>
+    <div class="curved-corner-star">
+      <div id="curved-corner-topright"></div>
+      <div id="curved-corner-topleft"></div>
+    </div>
+  </div>
+
+  <div id="star-4">
+    <div class="curved-corner-star">
+      <div id="curved-corner-bottomright"></div>
+      <div id="curved-corner-bottomleft"></div>
+    </div>
+    <div class="curved-corner-star">
+      <div id="curved-corner-topright"></div>
+      <div id="curved-corner-topleft"></div>
+    </div>
+  </div>
+
+  <div id="star-5">
+    <div class="curved-corner-star">
+      <div id="curved-corner-bottomright"></div>
+      <div id="curved-corner-bottomleft"></div>
+    </div>
+    <div class="curved-corner-star">
+      <div id="curved-corner-topright"></div>
+      <div id="curved-corner-topleft"></div>
+    </div>
+  </div>
+
+  <div id="star-6">
+    <div class="curved-corner-star">
+      <div id="curved-corner-bottomright"></div>
+      <div id="curved-corner-bottomleft"></div>
+    </div>
+    <div class="curved-corner-star">
+      <div id="curved-corner-topright"></div>
+      <div id="curved-corner-topleft"></div>
+    </div>
+  </div>
+
+  <div id="star-7">
+    <div class="curved-corner-star">
+      <div id="curved-corner-bottomright"></div>
+      <div id="curved-corner-bottomleft"></div>
+    </div>
+    <div class="curved-corner-star">
+      <div id="curved-corner-topright"></div>
+      <div id="curved-corner-topleft"></div>
+    </div>
+  </div>
+</div>
+</center>
+
+  <!-- Sección Mapa Interactivo -->
+  <section id="mapa" class="map-section">
+    <h2>Marine Species Map</h2>
+    <div id="map-content">
+      <div id="map-filters">
+        <label><input type="checkbox" id="filter-tortugas" checked> 🐢 Turtles</label>
+        <label><input type="checkbox" id="filter-tiburones" checked> 🦈 Sharks</label>
+        <label><input type="checkbox" id="filter-rayas" checked> 🌊 Rays</label>
+        <label><input type="checkbox" id="filter-peces" checked> 🐟 Fish</label>
+      </div>
+      <div id="map" style="height: 500px;"></div>
+    </div>
+  </section>
+
+  <!-- View Species Section -->
+  <section id="visualizar" class="species-section">
+    <h2>View Species</h2>
+
+    <!-- Category 1: Marine Turtles -->
+    <div class="accordion">
+      <button class="accordion-header">🐢 Marine Turtles</button>
+      <div class="accordion-content species-grid">
+        <div class="species-card"><div class="species-image1"></div><div class="species-content"><h3>Chelonia mydas — Green Turtle</h3><button class="species-btn">View Details</button></div></div>
+        <div class="species-card"><div class="species-image2"></div><div class="species-content"><h3>Dermochelys coriacea — Leatherback Turtle</h3><button class="species-btn">View Details</button></div></div>
+        <div class="species-card"><div class="species-image3"></div><div class="species-content"><h3>Lepidochelys olivacea — Olive Ridley Turtle</h3><button class="species-btn">View Details</button></div></div>
+        <div class="species-card"><div class="species-image4"></div><div class="species-content"><h3>Eretmochelys imbricata — Hawksbill Turtle</h3><button class="species-btn">View Details</button></div></div>
+        <div class="species-card"><div class="species-image5"></div><div class="species-content"><h3>Caretta caretta — Loggerhead Turtle</h3><button class="species-btn">View Details</button></div></div>
+        <div class="species-card"><div class="species-image6"></div><div class="species-content"><h3>Lepidochelys kempii — Kemp's Ridley Turtle</h3><button class="species-btn">View Details</button></div></div>
+      </div>
+    </div>
+
+    <!-- Category 2: Sharks -->
+    <div class="accordion">
+      <button class="accordion-header">🦈 Sharks</button>
+      <div class="accordion-content species-grid">
+        <div class="species-card"><div class="species-image7"></div><div class="species-content"><h3>Sphyrna lewini — Hammerhead Shark</h3><button class="species-btn">View Details</button></div></div>
+        <div class="species-card"><div class="species-image8"></div><div class="species-content"><h3>Rhincodon typus — Whale Shark</h3><button class="species-btn">View Details</button></div></div>
+        <div class="species-card"><div class="species-image9"></div><div class="species-content"><h3>Galeocerdo cuvier — Tiger Shark</h3><button class="species-btn">View Details</button></div></div>
+        <div class="species-card"><div class="species-image10"></div><div class="species-content"><h3>Carcharhinus leucas — Bull Shark</h3><button class="species-btn">View Details</button></div></div>
+        <div class="species-card"><div class="species-image11"></div><div class="species-content"><h3>Carcharhinus limbatus — Blacktip Shark</h3><button class="species-btn">View Details</button></div></div>
+        <div class="species-card"><div class="species-image12"></div><div class="species-content"><h3>Triaenodon obesus — Whitetip Reef Shark</h3><button class="species-btn">View Details</button></div></div>
+        <div class="species-card"><div class="species-image22"></div><div class="species-content"><h3>Isurus oxyrinchus — Shortfin Mako Shark</h3><button class="species-btn">View Details</button></div></div>
+        <div class="species-card"><div class="species-image23"></div><div class="species-content"><h3>Carcharhinus obscurus — Dusky Shark</h3><button class="species-btn">View Details</button></div></div>
+        <div class="species-card"><div class="species-image24"></div><div class="species-content"><h3>Carcharias taurus — Sand Tiger Shark</h3><button class="species-btn">View Details</button></div></div>
+        <div class="species-card"><div class="species-image25"></div><div class="species-content"><h3>Carcharhinus albimarginatus — Silvertip Shark</h3><button class="species-btn">View Details</button></div></div>
+        <div class="species-card"><div class="species-image26"></div><div class="species-content"><h3>Nebrius ferrugineus — Tawny Nurse Shark</h3><button class="species-btn">View Details</button></div></div>
+        <div class="species-card"><div class="species-image27"></div><div class="species-content"><h3>Hexanchus griseus — Bluntnose Sixgill Shark</h3><button class="species-btn">View Details</button></div></div>
+        <div class="species-card"><div class="species-image28"></div><div class="species-content"><h3>Mitsukurina owstoni — Goblin Shark</h3><button class="species-btn">View Details</button></div></div>
+        <div class="species-card"><div class="species-image29"></div><div class="species-content"><h3>Chlamydoselachus anguineus — Frilled Shark</h3><button class="species-btn">View Details</button></div></div>
+        <div class="species-card"><div class="species-image30"></div><div class="species-content"><h3>Alopias pelagicus — Pelagic Thresher Shark</h3><button class="species-btn">View Details</button></div></div>
+        <div class="species-card"><div class="species-image31"></div><div class="species-content"><h3>Orectolobus maculatus — Wobbegong Shark</h3><button class="species-btn">View Details</button></div></div>
+        <div class="species-card"><div class="species-image32"></div><div class="species-content"><h3>Chiloscyllium punctatum — Brownbanded Bamboo Shark</h3><button class="species-btn">View Details</button></div></div>
+        <div class="species-card"><div class="species-image33"></div><div class="species-content"><h3>Etmopterus lucifer — Blackbelly Lanternshark</h3><button class="species-btn">View Details</button></div></div>
+        <div class="species-card"><div class="species-image34"></div><div class="species-content"><h3>Pseudocarcharias kamoharai — Crocodile Shark</h3><button class="species-btn">View Details</button></div></div>
+        <div class="species-card"><div class="species-image35"></div><div class="species-content"><h3>Hydrolagus spp. — Chimaera</h3><button class="species-btn">View Details</button></div></div>
+        <div class="species-card"><div class="species-image36"></div><div class="species-content"><h3>Atelomycterus marmoratus — Coral Catshark</h3><button class="species-btn">View Details</button></div></div>
+        <div class="species-card"><div class="species-image37"></div><div class="species-content"><h3>Lamna ditropis — Salmon Shark</h3><button class="species-btn">View Details</button></div></div>
+        <div class="species-card"><div class="species-image38"></div><div class="species-content"><h3>Somniosus microcephalus — Greenland Shark</h3><button class="species-btn">View Details</button></div></div>
+        <div class="species-card"><div class="species-image39"></div><div class="species-content"><h3>Squalus acanthias — Spiny Dogfish</h3><button class="species-btn">View Details</button></div></div>
+        <div class="species-card"><div class="species-image40"></div><div class="species-content"><h3>Squatina squatina — Angelshark</h3><button class="species-btn">View Details</button></div></div>
+        <div class="species-card"><div class="species-image41"></div><div class="species-content"><h3>Pristiophorus cirratus — Longnose Sawshark</h3><button class="species-btn">View Details</button></div></div>
+      </div>
+    </div>
+
+    <!-- Category 3: Rays -->
+    <div class="accordion">
+      <button class="accordion-header">🌊 Rays</button>
+      <div class="accordion-content species-grid">
+        <div class="species-card"><div class="species-image13"></div><div class="species-content"><h3>Mobula birostris — Giant Manta</h3><button class="species-btn">View Details</button></div></div>
+        <div class="species-card"><div class="species-image14"></div><div class="species-content"><h3>Aetobatus narinari — Spotted Eagle Ray</h3><button class="species-btn">View Details</button></div></div>
+        <div class="species-card"><div class="species-image15"></div><div class="species-content"><h3>Dasyatis americana — Southern Stingray</h3><button class="species-btn">View Details</button></div></div>
+        <div class="species-card"><div class="species-image16"></div><div class="species-content"><h3>Taeniura meyeni — Blotched Fantail Ray</h3><button class="species-btn">View Details</button></div></div>
+      </div>
+    </div>
+
+    <!-- Category 4: Bony Fish -->
+    <div class="accordion">
+      <button class="accordion-header">🐟 Bony Fish</button>
+      <div class="accordion-content species-grid">
+        <div class="species-card"><div class="species-image17"></div><div class="species-content"><h3>Chaetodon humeralis — Threebanded Butterflyfish</h3><button class="species-btn">View Details</button></div></div>
+        <div class="species-card"><div class="species-image18"></div><div class="species-content"><h3>Scarus ghobban — Bluebarred Parrotfish</h3><button class="species-btn">View Details</button></div></div>
+        <div class="species-card"><div class="species-image19"></div><div class="species-content"><h3>Sphyraena barracuda — Great Barracuda</h3><button class="species-btn">View Details</button></div></div>
+        <div class="species-card"><div class="species-image20"></div><div class="species-content"><h3>Caranx latus — Horse-eye Jack</h3><button class="species-btn">View Details</button></div></div>
+        <div class="species-card"><div class="species-image21"></div><div class="species-content"><h3>Lutjanus argentiventris — Yellow Snapper</h3><button class="species-btn">View Details</button></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Developers Section -->
+  <section id="desarrolladores" class="developers-section" style="padding: 2rem; background-image: url(https://images.pexels.com/photos/6216347/pexels-photo-6216347.jpeg);background-repeat: no-repeat;background-size: cover; color: #fafafa;">
+    <h2 style="text-align: center; margin-bottom: 2rem;">Project Developers</h2>
+    <div class="developers-cards" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem;">
+      <!-- Developer Card 1 -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="profile-image" style="background-color: #64ffda; border-radius: 50%; width: 120px; height: 120px; margin: 15px auto 0 auto; overflow: hidden;">
+              <img src="/static/images/dev1.jpg" alt="Developer 1" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div class="name" style="margin-top: 15px; font-size: 27px; font-weight: bold;">Isaac Quirós</div>
+          </div>
+          <div class="flip-card-back">
+            <div class="Description" style="padding: 11px;">
+              <p class="description" style="font-size: 14px; letter-spacing: 1px; color: #0a192f;">
+                Industrial Electronics Student at COVAO
+              </p>
+              <p class="description" style="font-size: 12px; letter-spacing: 1px; color: #0a192f;">
+                isaacquiroa9@gmail.com
+              </p>
+             
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Developer Card 2 -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="profile-image" style="background-color: #64ffda; border-radius: 50%; width: 120px; height: 120px; margin: 15px auto 0 auto; overflow: hidden;">
+              <img src="/static/images/dev2.jpg" alt="Developer 2" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div class="name" style="margin-top: 15px; font-size: 27px; font-weight: bold;">Jorshua Brenes</div>
+          </div>
+          <div class="flip-card-back">
+            <div class="Description" style="padding: 11px;">
+              <p class="description" style="font-size: 14px; letter-spacing: 1px; color: #0a192f;">
+                Web Development Student at CTP Santa Lucía
+              </p>
+              <p class="description" style="font-size: 12px; letter-spacing: 1px; color: #0a192f;">
+                brenesalejandro97@gmail.com
+              </p>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Developer Card 3 -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="profile-image" style="background-color: #64ffda; border-radius: 50%; width: 120px; height: 120px; margin: 15px auto 0 auto; overflow: hidden;">
+              <img src="/static/images/dev3.jpg" alt="Developer 3" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div class="name" style="margin-top: 15px; font-size: 27px; font-weight: bold;">Michael Ulloa</div>
+          </div>
+          <div class="flip-card-back">
+            <div class="Description" style="padding: 11px;">
+              <p class="description" style="font-size: 14px; letter-spacing: 1px; color: #0a192f;">
+                Industrial Electronics Student at COVAO
+              </p>
+              <p class="description" style="font-size: 12px; letter-spacing: 1px; color: #0a192f;">
+                michaelulloaabarca@gmail.com
+              </p>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Developer Card 4 -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="profile-image" style="background-color: #64ffda; border-radius: 50%; width: 120px; height: 120px; margin: 15px auto 0 auto; overflow: hidden;">
+              <img src="/static/images/dev4.jpg" alt="Developer 4" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div class="name" style="margin-top: 15px; font-size: 27px; font-weight: bold;">Densell Hernández</div>
+          </div>
+          <div class="flip-card-back">
+            <div class="Description" style="padding: 11px;">
+              <p class="description" style="font-size: 14px; letter-spacing: 1px; color: #0a192f;">
+                Industrial Electronics Student at COVAO
+              </p>
+              <p class="description" style="font-size: 12px; letter-spacing: 1px; color: #0a192f;">
+                densellhernandez06@gmail.com
+              </p>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Developer Card 5 -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="profile-image" style="background-color: #64ffda; border-radius: 50%; width: 120px; height: 120px; margin: 15px auto 0 auto; overflow: hidden;">
+              <img src="/static/images/dev5.jpg" alt="Developer 5" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div class="name" style="margin-top: 15px; font-size: 27px; font-weight: bold;">Joan Leiton</div>
+          </div>
+          <div class="flip-card-back">
+            <div class="Description" style="padding: 11px;">
+              <p class="description" style="font-size: 14px; letter-spacing: 1px; color: #0a192f;">
+                Design Student at CTP Oreamuno
+              </p>
+              <p class="description" style="font-size: 12px; letter-spacing: 1px; color: #0a192f;">
+                Joanleitoncalderon21@gmail.com
+              </p>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Developer Card 6 -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="profile-image" style="background-color: #64ffda; border-radius: 50%; width: 120px; height: 120px; margin: 15px auto 0 auto; overflow: hidden;">
+              <img src="/static/images/dev6.jpg" alt="Developer 6" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div class="name" style="margin-top: 15px; font-size: 27px; font-weight: bold;">Juan Pablo Cubero</div>
+          </div>
+          <div class="flip-card-back">
+            <div class="Description" style="padding: 11px;">
+              <p class="description" style="font-size: 14px; letter-spacing: 1px; color: #0a192f;">
+                Accounting Student at COVAO
+              </p>
+              <p class="description" style="font-size: 14px; letter-spacing: 1px; color: #0a192f;">
+                email
+              </p>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div id="species-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="container">
+        <div class="card">
+          <div class="circle"></div>
+        </div>
+      </div>
+      <div id="species-info">
+        <h2 id="species-name"></h2>
+        <p><strong>Scientific Name:</strong> <span id="scientific-name"></span></p>
+        <p><strong>Average Weight:</strong> <span id="average-weight"></span></p>
+        <p><strong>Average Size:</strong> <span id="average-size"></span></p>
+        <p><strong>Conservation Status:</strong> <span id="conservation"></span></p>
+        <p><strong>Description:</strong> <span id="description"></span></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dark Mode Toggle Button -->
+  <div class="toggle-switch" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;">
+    <label class="switch-label">
+      <input type="checkbox" id="dark-mode-toggle" class="checkbox">
+      <span class="slider"></span>
+    </label>
+  </div>
+
+
+
+  <script>
+    window.speciesData = {{ species_data | tojson }};
+  </script>
+  <script src="/static/js/script.js"></script>
+  <script>
+    // Acordeón especies
+    document.querySelectorAll(".accordion-header").forEach(btn => {
+      btn.addEventListener("click", () => {
+        btn.classList.toggle("active");
+        const content = btn.nextElementSibling;
+        content.style.maxHeight = content.style.maxHeight ? null : content.scrollHeight + "px";
+      });
+    });
+  </script>
+
+  <footer class="site-footer">
+    <div class="footer-images-container">
+      <div class="footer-image1"><img class="footer-image1" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/2449px-NASA_logo.svg.png" alt="NASA"></div>
+      <div class="footer-image2"><img class="footer-image2" src="https://assets.spaceappschallenge.org/media/images/Space_Apps_Logo_Wide_transparency_.2e16d0ba.fill-674x450_iNhPFc8.png" alt="SpaceApps"></div>
+    </div>
+    <div class="footer-text">
+      <p>© 2025 AstroSharks | SeaTracker. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
